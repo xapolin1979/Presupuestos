@@ -1,0 +1,78 @@
+
+
+    <div class="presupuesto" *ngFor="let lista of precios; index as i">
+     
+        <div class="texto">
+            <h2><strong>{{ lista.titulo }}</strong></h2>
+            <h5>{{ lista.texto }}</h5>
+        </div>
+        <h2><strong>{{ lista.precio }} eur</strong></h2>
+        <div class="check">
+            <input type="checkbox"   [checked]="lista.isChecked" (change)="marcado(lista)"> 
+            Afegir
+        </div>
+        @if(lista.isChecked==true && lista.titulo=="Web"){
+            <app-panel  (contadorPaginasChange)="actualizarContadorPaginas($event)" 
+             (contadorIdiomasChange)="actualizarContadorIdiomas($event)">  ></app-panel>
+        }
+      
+    </div>
+
+   
+
+
+<div class="cajapreuTotal">
+    <div class="preuTotal">
+        <h2><strong>Preu pressuposat:</strong></h2>
+            <h2><strong>{{total}} eur</strong></h2>
+    </div>
+   
+</div>
+
+<div class="demanarPresupost">
+    <h3><strong>Demanar presupost</strong></h3>
+<form action="" [formGroup]="formulario">
+  <div class="inputs">
+  
+    <div class="nombre">
+        <input class="form-control" formControlName="name" type="text" placeholder="Nom " >
+         <div class="alert alert-danger mt-3"  role="alert" [hidden]="formulario.get('name')?.valid || formulario.get('name')?.pristine">
+            Intrudueix el nom
+          </div> 
+    </div>
+       <div class="telefono">
+        <input class="form-control" formControlName="telefono" type="number" placeholder="Telèfon" >
+         <div class="alert alert-danger mt-3" role="alert" [hidden]="formulario.get('telefono')?.valid || formulario.get('telefono')?.pristine">
+            Intrudueix el telèfon
+           </div> 
+       </div>
+        <div class="email">
+            <input class="form-control" formControlName="email" type="text" placeholder="Email">
+            
+            <div class="alert alert-danger mt-3" role="alert" [hidden]="formulario.get('email')?.valid ||  formulario.get('email')?.pristine">
+                @if(formulario.get('email')?.errors?.['email']){
+                    <span >
+                         Email no vàlid
+                    </span>
+                 } 
+                @if(formulario.get('email')?.errors?.['required'] ){
+                    <span >
+                        Intrudeix un correu
+                    </span>
+
+                }
+          
+            </div> 
+        </div>
+     
+     
+
+        <button class="btn btn-success "[disabled]="formulario.get('name')?.invalid || formulario.get('telefono')?.invalid || formulario.get('email')?.invalid"    (click)="valores()">Sol.licitar presupost</button>
+
+  
+   </div>
+
+</form>     
+</div>
+
+<button class="btn btn-primary " (click)="eliminarLocalStore()">EliminarLocalstorage</button>

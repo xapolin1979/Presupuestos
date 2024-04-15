@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<div class="ContainerPresupuesto"  >
+    <div class="titulo">
+        <h3><strong>Presupost en curs:</strong> </h3>
+            
+    </div>
+  
+        <div class="input-group">
+            <div class="input-group w-50">
+                <input type="search"  [(ngModel)]="valorNombre" (input)="buscadorNombre()" class="form-control rounded " placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" (click)=" ordenarData()" class="btn btn-link">Data</button>
+                <button type="button" (click)=" ordenarPrecio()" class="btn btn-link">Import</button>
+                <button type="button" (click)=" ordenarNombre()" class="btn btn-link">Nom</button>
+              </div>
+          </div>
+        
+            <div class="containerPresu" >
+     
+               
+          <div class="presupuestos" *ngFor="let presu of infoPresupuestos; index as i" >
+           
+              <div class="cajas">
+                  <h5><strong>{{presu.nombre}}</strong></h5>
+                  <p>{{"correo : " + presu.email}}</p>
+                  <p>{{"Telefono : " +presu.telefono}}</p>
+              </div>
+              <div class="cajas">
+                  <h5><strong>Serveis contractats:</strong></h5>
+                 <p > {{presu.elegidos.includes('Web')? '. Web': null}} {{presu.paginas==0?null:"("+presu.paginas + " pagines"}}   {{presu.idiomas==0?null:presu.idiomas + " llenguatges )"}}</p> 
+                 <p> {{presu.elegidos.includes('Ads')? ' . Ads': null}}</p>
+                 <p> {{presu.elegidos.includes('Seo')? ' . Seo': null}}</p>
+                 <p>{{presu.fecha}}</p>
+              </div>
+              <div class="precio">
+                   <h5>Total:</h5>
+                   <h2><strong>{{presu.precio}} €</strong></h2> 
+              </div>
+
+             <button (click)="verUrl(i)" type="button" class="btn btn-info">Ver Url</button>
+          </div>
+        
+    </div>
+</div>
+

@@ -1,0 +1,83 @@
+<div class="containerInputs">
+  <div class="paginas">
+    <img data-bs-toggle="modal" data-bs-target="#exampleModal1" src="assets/img/info-button_64494.png" alt="" />
+    Nombre de pàgines
+  </div>
+ 
+    <div class="casillaImput">
+      <img (click)="restar(paginas)" src="assets/img/menos.png" alt="" />
+      <input
+        type="number"
+        class="numeros form-control"
+        [formControl]="validarPagina"
+        [value]="contadorPaginas"
+        readonly
+      />
+      <img (click)="sumar(paginas)" src="assets/img/sumar.png" alt="" />
+    </div>
+
+ 
+</div>
+<div class="containerInputs2">
+  <div class="paginas2">
+    <img data-bs-toggle="modal" data-bs-target="#exampleModal2" src="assets/img/info-button_64494.png" alt="" />
+    Nombre de llenguatges
+  </div>
+  <div class="casillaImput2">
+    <img (click)="restar(idiomas)" src="assets/img/menos.png" alt="" />
+    <input
+      type="number"
+      class="numeros2 form-control"
+      [formControl]="validarIdioma"
+      [value]="contadorIdiomas"
+      readonly 
+    />
+
+    <img (click)="sumar(idiomas)" src="assets/img/sumar.png" alt="" />
+  </div>
+</div>
+<div class="alertas">
+  @if(contadorPaginas===0 ||  contadorIdiomas===0){
+    <div class="alert alert-danger" role="alert" >
+      Has de inserir com a mínim una pàgina i un idioma.
+  </div>
+  }
+ 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Número de pagines</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Afegeix les pagines que tindrà el teu projecte.
+        El cost de cada pagina es de 30 eur
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tancar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Número de llenguatges</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Afegeix els llenguatges que tindrà el teu projecte.
+        El cost de cada llenguatge es de 30 eur
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tancar</button>
+      </div>
+    </div>
+  </div>
+</div>

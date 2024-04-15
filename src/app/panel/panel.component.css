@@ -1,0 +1,86 @@
+.containerInputs {
+  width: 900px;
+  height: auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: end;
+
+}
+
+.paginas {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginas img {
+  width: 10%;
+  margin: 5px;
+  cursor: pointer;
+}
+.casillaImput {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 60px;
+}
+.casillaImput img {
+  width: 14%;
+  cursor: pointer;
+}
+.numeros {
+  width: 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.containerInputs2 {
+  width: 900px;
+  height: auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
+}
+
+.paginas2 {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginas2 img {
+  width: 10%;
+  margin: 5px;
+  cursor: pointer;
+}
+.casillaImput2 {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 60px;
+}
+.casillaImput2 img {
+  width: 14%;
+  cursor: pointer;
+}
+.numeros2 {
+  width: 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+.alertas {
+  max-width: 100%;
+  height: auto;
+  margin-right: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: end;
+}

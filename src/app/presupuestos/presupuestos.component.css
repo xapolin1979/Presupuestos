@@ -1,0 +1,65 @@
+.ContainerPresupuesto{
+    width: 1000px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo{
+    width: 100%;
+}
+
+.input-group{
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+   
+}
+.btn-link{
+    text-decoration: none;
+    color:black
+}
+.btn-link:hover{
+color:red;
+}
+
+.presupuestos{
+    width: 900px;
+    height: 300px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cajas{
+    width: 33.3%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 35px;
+}
+.precio{
+    width: 33.3%;
+    height: 180px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.precio h5{
+    color:grey;
+ 
+}
+.url{
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
