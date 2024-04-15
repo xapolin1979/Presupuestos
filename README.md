@@ -11,7 +11,7 @@ Esta aplicación de presupuestos es un ejercicio práctico que se enfoca en la c
 1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
 
     ```
-    git clone <URL_del_repositorio>
+    git clone https://github.com/xapolin1979/Presupuestos.git
     ```
 
 2. Navega hasta el directorio del proyecto:
